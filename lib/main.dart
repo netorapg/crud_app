@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'database_helper.dart';
 import 'item.dart';
 
@@ -10,9 +11,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter CRUD',
+      title: 'Anotações',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
+        textTheme: GoogleFonts.robotoTextTheme(
+          Theme.of(context).textTheme,
+        ),
       ),
       home: MyHomePage(),
     );
@@ -70,20 +75,24 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Flutter CRUD'),
+        title: Text('Anotações'),
       ),
       body: Column(
         children: [
           Padding(
-            padding: EdgeInsets.all(8.0),
+            padding: EdgeInsets.all(16.0),
             child: Row(
               children: [
                 Expanded(
                   child: TextField(
                     controller: _controller,
-                    decoration: InputDecoration(labelText: 'Item Name'),
+                    decoration: InputDecoration(
+                      labelText: 'Item Name',
+                      border: OutlineInputBorder(),
+                    ),
                   ),
                 ),
+                SizedBox(width: 8),
                 ElevatedButton(
                   onPressed: () => _addItem(_controller.text),
                   child: Text(_editingItemId == null ? 'Add' : 'Update'),
@@ -96,25 +105,37 @@ class _MyHomePageState extends State<MyHomePage> {
               itemCount: _items.length,
               itemBuilder: (context, index) {
                 final item = _items[index];
-                return ListTile(
-                  title: Text(item.name),
-                  trailing: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      IconButton(
-                        icon: Icon(Icons.edit),
-                        onPressed: () {
-                          _editItem(item);
-                        },
-                      ),
-                      IconButton(
-                        icon: Icon(Icons.delete),
-                        onPressed: () => _deleteItem(item.id!),
-                      ),
-                    ],
+                return Card(
+                  margin: EdgeInsets.symmetric(vertical: 4, horizontal: 8),
+                  child: ListTile(
+                    title: Text(item.name),
+                    trailing: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        IconButton(
+                          icon: Icon(Icons.edit),
+                          onPressed: () {
+                            _editItem(item);
+                          },
+                        ),
+                        IconButton(
+                          icon: Icon(Icons.delete),
+                          onPressed: () => _deleteItem(item.id!),
+                        ),
+                      ],
+                    ),
                   ),
                 );
               },
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.all(16),
+            child: Text(
+              'netorapg ©2024',
+              style: TextStyle(
+                color: const Color.fromARGB(255, 0, 0, 0),
+              ),
             ),
           ),
         ],
