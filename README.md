@@ -1,16 +1,15 @@
-# crud_app
+# Aplicativo CRUD de anotações em Flutter
 
-A new Flutter project.
+Este é um simples projeto CRUD para praticar alguns conceitos e uso de sqlite.
 
-## Getting Started
+## Interface
 
-This project is a starting point for a Flutter application.
+### Tela Inicial
+<img src="img/telainicial.jpeg" alt="tela inicial" />
+### Adição de item é feita escrevendo no input "item name" e clicando no botão "Add"
+<img src="img/adicaodeitens.jpeg" alt="tela inicial" />
+### A exclusão é feita ao apertar no botão de lixeira
+<img src="img/excluiritem.jpeg" alt="tela inicial" />
+### A edição é feita clicando no botão de lapis, reeescrevendo no input e apertando o botão de "Update"
+<img src="img/editaritem.jpeg" alt="tela inicial" />
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
