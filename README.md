@@ -1,18 +1,14 @@
 # Aplicativo CRUD de anotações em Flutter
 
-Este é um simples projeto CRUD para praticar alguns conceitos e uso de sqlite.
+Este é um simples projeto CRUD para praticar alguns conceitos e uso de SQLite.
 
 ## Interface
 
-### Tela Inicial
-<img src="img/telainicial.jpeg" alt="tela inicial" />
+### Telas do Aplicativo
 
-### Adição de item é feita escrevendo no input "item name" e clicando no botão "Add"
-<img src="img/adicaodeitens.jpeg" alt="tela inicial" />
-
-### A exclusão é feita ao apertar no botão de lixeira
-<img src="img/excluiritem.jpeg" alt="tela inicial" />
-
-### A edição é feita clicando no botão de lapis, reeescrevendo no input e apertando o botão de "Update"
-<img src="img/editaritem.jpeg" alt="tela inicial" />
-
+<div style="display: flex; flex-direction: row; justify-content: space-around;">
+  <img src="img/telainicial.jpeg" alt="tela inicial" width="200" />
+  <img src="img/adicaodeitens.jpeg" alt="adição de itens" width="200" />
+  <img src="img/excluiritem.jpeg" alt="exclusão de itens" width="200" />
+  <img src="img/editaritem.jpeg" alt="edição de itens" width="200" />
+</div>
